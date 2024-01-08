@@ -52,6 +52,12 @@ def run(context):
         if not textPalette.isVisible:
             textPalette.isVisible = True
         textPalette.writeText("*** ROPE THREAD ***")
+        textPalette.writeText(f"Rope Diameter: {ropeDiameter:.3f}")
+        textPalette.writeText(f"Tool Diameter: {toolDiameter:.3f}")
+        textPalette.writeText(f"Step Over: {stepOver:.3f}")
+        textPalette.writeText(" ")
+        textPalette.writeText("*** Positions: ***")
+        textPalette.writeText("Z= Front stock offset \nX= Thread depth")
         for pos in positions:
             textPalette.writeText(f"Z: {frontSideOffset +pos[0]:.3f}, X: {pos[1]:.3f}")
 
